@@ -13,11 +13,7 @@ programa
 		leia (notaDois)
 		escreva ("Nota 3: ")
 		leia (notaTres)
-		//notaUm = notaUm/2
-		//notaDois = notaDois/3
-		//notaTres = notaTres/5
-		//notaFinal = ((notaUm + notaDois + notaTres) / 2+3+5)
-		notaFinal = notaUm/2 + notaDois/3 + notaTres/5
+		notaFinal = ((notaUm*2 + notaDois*3 + notaTres*5)/10)
 		escreva ("A média final do aluno é : ", Matematica.arredondar(notaFinal, 2))
 	}
 }
@@ -26,7 +22,7 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 591; 
+ * @POSICAO-CURSOR = 414; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
