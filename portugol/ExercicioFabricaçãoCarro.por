@@ -1,21 +1,24 @@
 programa
 {
+	inclua biblioteca Matematica
 	
 	funcao inicio()
-	{
-		real custoFabrica;
+	{    //Variaveis
+		real custoFabricacao;
           real custoConsumidor;
-          real porcentagemDistribuidor = 28.0;
-          real percentualImpostos = 45.0;
+          const real porcentagemDistribuidor = 28.0;
+          const real percentualImpostos = 45.0;
           real destribuidor;
           real ValorImpostos;
+		//Entradas de Dado
 		escreva ("Qual o custo de fabricação do carro: ")
-		leia (custoFabrica)
-
-		ValorImpostos = (( custoFabrica * percentualImpostos )/100);
-		destribuidor = ((custoFabrica + percentualImpostos) * porcentagemDistribuidor) / 100.000;
+		leia (custoFabricacao)
+		//Processamento
+		ValorImpostos = (( custoFabricacao * percentualImpostos )/100);
+		destribuidor = ((custoFabricacao + percentualImpostos) * porcentagemDistribuidor) / 100.000;
 		custoConsumidor = (destribuidor + ValorImpostos);
-		escreva ("O custo do consumidor é ", custoConsumidor);
+		//Saida
+		escreva ("O custo do consumidor é ", Matematica.arredondar(custoConsumidor + custoFabricacao , 2));
 		
 	}
 }
@@ -24,7 +27,7 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 96; 
+ * @POSICAO-CURSOR = 740; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
