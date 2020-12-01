@@ -4,35 +4,32 @@ programa
 	
 	funcao inicio()
 	{	//Variaveis
-		real baseTriangulo
-		real alturaTriangulo
-		real area
+		real baseTriangulo = 0.0
+		real alturaTriangulo = 0.0
+		real resultado = 0.0
 		//Entrada de Dados
-		escreva ("Informe um numeros positivos para a base do triangulo: ")
+		escreva ("Informe um numero para a base do triangulo: ")
 		leia(baseTriangulo)
-		escreva ("Informe um numeros positivos para a altura do triangulo: ")
+		escreva ("Informe um numero para a altura do triangulo: ")
 		leia(alturaTriangulo)
 		//Processamento de dados
-		area = baseTriangulo*alturaTriangulo/2
-		//Saida de dados
-		se (baseTriangulo>=0 e alturaTriangulo >=0)
-		{
-			escreva ("O resultado é ", mat.arredondar(area, 2))
-		}
+		se (alturaTriangulo>0 e baseTriangulo>0)
+			{
+		 	resultado = (baseTriangulo*alturaTriangulo)/2
+			escreva ("A área do triangulo é: ", mat.arredondar(resultado,2))
+			}
 		senao
 		{
-			escreva ("Desculpe os valores precisam ser positivos.")
+			escreva("Os valores precisam ser positivos")
 		}
 	}
-	
-	
 }
 /* $$$ Portugol Studio $$$ 
  * 
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 539; 
+ * @POSICAO-CURSOR = 120; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
