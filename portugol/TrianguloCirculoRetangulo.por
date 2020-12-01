@@ -7,6 +7,20 @@ programa
 	funcao pula(){
 		escreva("\n")
 			}
+	funcao real calculeAreaTriangulo(real base, real altura)
+			{
+		
+			se (altura>0 e base>0)
+			{
+			 area = (base*altura)/2
+			escreva ("A área do triangulo é: ", mat.arredondar(area,2))
+			}
+			senao
+			{
+			escreva("Os valores precisam ser positivos")
+			}
+			retorne area
+			}
 	funcao inicio()
 	{		
 		real raioCirculo=0.0
@@ -25,16 +39,11 @@ programa
 				leia(altura)	
 				escreva ("Digite o valor da base do triangulo: ")
 				leia(base)
+				
 							
 				//Processamento de dados
-				se (altura>0 e base>0)
-				{
-				 area = (base*altura)/2
-				escreva ("A área do triangulo é: ", mat.arredondar(area,2))
-				}
-				senao
-				{
-				escreva("Os valores precisam ser positivos")
+				CalculoAreaTriangulo(){
+					escreva (area)
 				}
 			pare
 			
@@ -48,8 +57,7 @@ programa
 					escreva("Valor inválido! Digite um valor maior que 0 para base e para altura")
 				} senao 
 				{
-					area = altura * base
-					escreva("A área do retângulo é: " + mat.arredondar(area, 2))	
+						
 				}
 			pare
 				caso '2':
@@ -69,15 +77,34 @@ programa
 			caso contrario:
 			escreva ("o valor não é igual a 0, 1 ou 2")
 				}
+					{funcao real calculeAreaTriangulo(real base, real altura)
+				{
+		
+				se (altura>0 e base>0)
+				{
+				 area = (base*altura)/2
+				escreva ("A área do triangulo é: ", mat.arredondar(area,2))
+				}
+				senao
+				{
+				escreva("Os valores precisam ser positivos")
+				}
+				retorne (area)
+				}
 		}
+		
 	}
+	
+}	
+	}
+	
 /* $$$ Portugol Studio $$$ 
  * 
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 336; 
- * @PONTOS-DE-PARADA = ;
+ * @POSICAO-CURSOR = 699; 
+ * @PONTOS-DE-PARADA = 34;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
  * @FILTRO-ARVORE-TIPOS-DE-SIMBOLO = variavel, vetor, matriz, funcao;
