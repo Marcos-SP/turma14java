@@ -3,7 +3,7 @@ import java.util.Scanner;
 public class IdadeAnosEmDias {
 		public static void main(String[] args) {
 			int tempoDias;
-			try (Scanner leia = new Scanner(System.in)) {//Perguntar Ed
+			try (Scanner leia = new Scanner(System.in)) { //Perguntar Ed
 				System.out.println("Escreva o tempo em dias: ");
 				tempoDias = leia.nextInt();
 			}
