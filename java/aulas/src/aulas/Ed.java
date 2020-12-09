@@ -11,7 +11,7 @@ public class Ed
 		//variaveis
 		Scanner teclado = new Scanner(System.in);
 		int tamanho;
-		
+		String genero;
 		
 		System.out.println("Digite o tamanho da linha:");
 		tamanho = teclado.nextInt();
