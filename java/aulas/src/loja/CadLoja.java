@@ -48,7 +48,7 @@ public class CadLoja {
 					escolhido = x;
 				}
 			}
-			System.out.println(escolhido);
+			System.out.print(escolhido);
 			}
 		
 		else if(menu == 2) {

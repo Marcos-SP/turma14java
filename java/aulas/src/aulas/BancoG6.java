@@ -1,6 +1,8 @@
 package aulas;
 
-public class BancoG6 {
-	Scanner leia = Scanner(System.in);
+import java.util.Scanner;
+
+public class BancoG6;
+{
 	
 }
