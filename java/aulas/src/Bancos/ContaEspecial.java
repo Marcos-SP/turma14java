@@ -18,5 +18,20 @@ public class ContaEspecial extends ContaCorrente
 	public void setValorLimite(double valorLimite) {
 		this.valorLimite = valorLimite;
 	}
-	
+	@Override
+	public boolean testarSaldo(double valor) {
+		boolean teste;
+		if (valor <=super.getSaldo()) {
+			teste = true;
+		}
+		else if(valor <= (valorLimite+super.getSaldo())){
+			double novoValor;
+			
+			teste = true;
+		}
+		else {
+			teste = false;
+		}
+		return teste;
+	}
 }

@@ -9,7 +9,7 @@ public abstract  class Conta { //Abstract pois generaliza, e outro programador n
 	
 	
 	//Construtores, pedreiro e peão
-	/*public Conta() //Construtor padrão
+	/*public Conta() //Construtor padrão	não pode ser aberta sem no minimo numero conta
 	{
 		
 	}
@@ -26,7 +26,7 @@ public abstract  class Conta { //Abstract pois generaliza, e outro programador n
 		this.cpf=cpf;
 	}
 	
-	//Encapulamento
+	//Encapsulamento
 		public int getNumeroConta() {
 			return numeroConta;
 		}
@@ -47,7 +47,12 @@ public abstract  class Conta { //Abstract pois generaliza, e outro programador n
 	//METODO
 						//PARAMETRO ENTRADA
 	public void debito (double valorDebito) {
-		this.saldo=this.saldo - valorDebito; //THIS.INDICA QUE O VALOR È DA CLASSE
+		if(testarSaldo(valorDebito)) {
+			this.saldo=this.saldo - valorDebito; //THIS.INDICA QUE O VALOR È DA CLASSE
+		}else {
+			System.out.println("Saldo Indiponivel");
+		}
+		
 		
 	}
 	public void credito (double valorCredito) {
@@ -60,7 +65,16 @@ public abstract  class Conta { //Abstract pois generaliza, e outro programador n
 	public void pixCredito(double ValorCreditoPix) {
 		this.saldo=this.saldo - ValorCreditoPix;
 	}
-	
+	public boolean testarSaldo(double valor) {
+		boolean teste;
+		if (valor <=this.saldo) {
+			teste = true;
+		}
+		else {
+			teste = false;
+		}
+		return teste;
+	}
 	
 	
 	
