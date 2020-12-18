@@ -1,5 +1,6 @@
 package Bancos;
 
 public class ContaUniversitaria extends ContaEspecial {
- public double emprestimoUniversitario;
+
+public double emprestimoUniversitario;
 }

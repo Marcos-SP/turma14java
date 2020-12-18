@@ -4,8 +4,6 @@ import java.util.Scanner;
 
 public class ContaEmpresa extends Conta{
  private double emprestimoEmpresa;
- 
- //Super = Super Classe, ele volta uma classe
 
  //Construtor
  public ContaEmpresa(int numeroConta, double emprestimoEmpresa) {
@@ -31,30 +29,23 @@ public double getEmprestimoEmpresa() {
 public void setEmprestimoEmpresa(double emprestimoEmpresa) {
 	this.emprestimoEmpresa = emprestimoEmpresa;
 }
-//Metedo
-public void pedirEmprestimo(double valor) {
-	super.credito(valor);//Credito recebe valor
-	this.emprestimoEmpresa -= valor;
+//Metodos
+public void emprestar(double valorEmprestimo)
+{
+	if(valorEmprestimo<=this.emprestimoEmpresa)
+	{
+		this.emprestimoEmpresa=this.emprestimoEmpresa-valorEmprestimo;
+		this.saldo=this.saldo+valorEmprestimo;
+		System.out.println("Valor de emprestimo disponivel:"+this.emprestimoEmpresa);
+		System.out.println("Saldo Atual: "+this.saldo);
+	}
+	else 
+	{
+		System.out.println("ERRO.O seu limite é "+this.emprestimoEmpresa);
+	}
+	
+	
 }
-@Override
-public boolean testarSaldo(double valor) {
-	boolean teste;
-	if (valor <=super.getSaldo()) {
-		teste = true;
-	}
-	else if(valor <= (this.emprestimoEmpresa+super.getSaldo())){
-		Scanner l= new Scanner(System.in);
-		System.out.println("Solicita emprestimo?Se sim digite valor, se nao digite 0");
-		valor = l.nextDouble();
-		double  valorCredito = valor - super.getSaldo();
-		super.credito(valorCredito);
-		this.emprestimoEmpresa=this.emprestimoEmpresa-valorCredito;
-		teste = true;
-	}
-	else {
-		teste = false;
-	}
-	return teste;
-}
+
  
 }

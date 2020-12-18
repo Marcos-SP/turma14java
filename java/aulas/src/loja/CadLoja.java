@@ -42,13 +42,16 @@ public class CadLoja {
 				
 			}
 			System.out.println("Qual produto voce deseja Comprar[CODIGO]");
-			sacola=leia.next();
-			for(int x =1;x<10;x++) {
-				if(codigos[x].equals(sacola)) {
+			sacola=leia.next().toUpperCase();
+			for(int x =0 ;x<10 ;x++ ) {
+				if (codigos[x].equals(sacola))
+				{
 					escolhido = x;
+					
 				}
+				
 			}
-			System.out.print(escolhido);
+			System.out.println(escolhido);
 			}
 		
 		else if(menu == 2) {

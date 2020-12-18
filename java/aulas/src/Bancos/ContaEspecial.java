@@ -4,11 +4,11 @@ public class ContaEspecial extends ContaCorrente
 {
 	public double valorLimite;
 	
-
-	public ContaEspecial(double valorLimite) {
-		super();
+	public ContaEspecial(int numeroConta, double valorLimite) {
+		super(numeroConta);
 		this.valorLimite = valorLimite;
 	}
+
 	
 
 	public double getValorLimite() {
