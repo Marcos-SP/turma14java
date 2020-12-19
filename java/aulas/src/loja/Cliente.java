@@ -8,6 +8,10 @@ public class Cliente extends Pessoa{
 		this.cpf = cpf;
 	}
 
+	public Cliente(String nome, char genero, int anoNascimento) {
+		super(nome, genero, anoNascimento);
+	}
+
 	//encapsu
 	public String getCpf() {
 		return cpf;

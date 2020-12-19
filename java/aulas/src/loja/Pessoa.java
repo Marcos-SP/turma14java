@@ -6,7 +6,7 @@ public abstract class Pessoa {
 	protected char genero;
 	protected int anoNascimento;
 	protected int idade;
-
+	
 	// Construtores
 	public Pessoa(String nome, char genero, int anoNascimento) {
 		super();
@@ -41,21 +41,12 @@ public abstract class Pessoa {
 	}
 
 	// Métodos
-	public int voltaIdade() {
-		if(this.anoNascimento<1900) {
-		System.out.println("INVALIDO");
-		return 0;
-		}
+	public int voltaIdade(int anoNascimento) {
+		
 		return 2020 - this.anoNascimento;
-	}
-	public int voltaIdade(int anoAtual) {
-		if(anoAtual==0||this.anoNascimento<=1900) {
-			System.out.println("DADOS INVALIDOS");
-			return 0;
-		}
-		else {
-			return anoAtual - this.anoNascimento;
-		}
 		
 	}
+	
+		
+	
 }
